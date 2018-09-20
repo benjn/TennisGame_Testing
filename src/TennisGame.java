@@ -11,7 +11,7 @@ public class TennisGame {
 	public TennisGame() {
 		player1Points = 0;
 		player2Points = 0;
-		gameEnded = false ;
+		gameEnded = false;
 	}
 	
 	private void checkGameEnded() {
@@ -23,11 +23,11 @@ public class TennisGame {
 	
 	private String getScore(int points) {
 		switch (points)	{
-		case 0: return "love";
-		case 1: return "15" ;
-		case 2: return "30" ;
-		case 3: return "40";
-		default: return "40" ;
+			case 0: return "love";
+			case 1: return "15";
+			case 2: return "30";
+			case 3: return "40";
+			default: return "40";
 		} 		
 	}
 	
@@ -77,15 +77,15 @@ public class TennisGame {
 					return "player2 wins";
 			}
 			
-			if (player1Points >= 4 && player1Points == player2Points)
+			if (player1Points >= 3 && player1Points == player2Points)
 				return "deuce";
 			
 			if (player1Points >= 4 && player1Points - player2Points == 1)
 				return "player1 has advantage";
 			
-			if (player2Points > 4 && player2Points - player1Points == 1)
+			if (player2Points >= 4 && player2Points - player1Points == 1)
 				return "player2 has advantage";							
 			
-			return  player2Score + " - " + player1Score ;
+			return  player1Score + " - " + player2Score ;
 	}
 }
